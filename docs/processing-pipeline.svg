@@ -1,7 +1,0 @@
-<svg width="900" height="400" viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="900" height="400" fill="#f5f5f5"/>
-  <rect x="10" y="10" width="880" height="380" fill="none" stroke="#999" stroke-width="2" stroke-dasharray="10,8"/>
-  <text x="450" y="170" text-anchor="middle" font-family="monospace" font-size="22" fill="#555">PLACEHOLDER — Processing Pipeline Diagram</text>
-  <text x="450" y="205" text-anchor="middle" font-family="monospace" font-size="15" fill="#888">Raw Points → Filtering → Clustering → Touch Candidate → ID Assignment → Gesture</text>
-  <text x="450" y="240" text-anchor="middle" font-family="monospace" font-size="13" fill="#aaa">Replace this file with a real diagram image</text>
-</svg>

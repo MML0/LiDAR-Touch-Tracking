@@ -2,7 +2,7 @@
 
 Real-time multi-touch detection and tracking from a 360° LiDAR sensor, built to drive an interactive LED wall game.
 
-<video src="media/demo-touch-1.mp4" controls width="700"></video>
+<video src="media/demo-touch-1.mp4" controls width="700" poster="media/hero-poster.jpg"></video>
 
 *(demo clip — see [media/](media/) for more test footage)*
 
@@ -38,7 +38,9 @@ OSC
 TouchDesigner  →  LED Wall / Game
 ```
 
-<img src="docs/system-architecture.svg" width="700" alt="System architecture — placeholder, replace with real diagram">
+<img src="docs/system-in-situ.jpg" width="700" alt="The deployed system at the Mellat Multiverse booth">
+
+<sub>The system deployed at the Mellat Multiverse booth — LiDAR-driven floor projection reacting to a visitor in real time.</sub>
 
 ## Hardware
 
@@ -67,7 +69,18 @@ The core problem: a LiDAR gives a noisy, unordered ring of distance points every
 Raw Points → Filtering → Clustering → Touch Candidate → Persistent ID → Gesture
 ```
 
-<img src="docs/processing-pipeline.svg" width="700" alt="Processing pipeline — placeholder, replace with real diagram">
+<table>
+<tr>
+<td><img src="docs/ambient-scan.jpg" width="220" alt="Raw / idle scan"></td>
+<td><img src="docs/active-touch.jpg" width="220" alt="Touch detected"></td>
+<td><img src="docs/led-wall-game.jpg" width="260" alt="Output on the LED wall"></td>
+</tr>
+<tr>
+<td align="center"><sub>1. Raw scan</sub></td>
+<td align="center"><sub>2. Touch detected</sub></td>
+<td align="center"><sub>3. Output on the wall</sub></td>
+</tr>
+</table>
 
 1. **Filtering** — raw points are cleaned of sensor noise and the known static background (the wall itself) is subtracted, so only new objects (hands) remain.
 2. **Clustering** — remaining points are grouped into candidate touch blobs.
@@ -77,19 +90,21 @@ Raw Points → Filtering → Clustering → Touch Candidate → Persistent ID �
 
 This is what makes **multi-touch** possible on a sensor that has no concept of "touch" on its own — every object on the surface is tracked independently and concurrently, each with its own stable ID.
 
-<img src="docs/multi-touch-tracking.svg" width="700" alt="Multi-touch ID tracking — placeholder, replace with real diagram">
+<img src="media/hero-poster.jpg" width="500" alt="The installation responding to a visitor's touch">
+
+<sub>Each contact point on the surface is tracked independently, by ID, as shown in the pipeline above.</sub>
 
 See [`demo/touch_tracking_concept.py`](demo/touch_tracking_concept.py) for a short, simplified illustration of the ID-matching and occlusion logic (not the production code — see [Note on code](#note-on-code) below).
 
-### Before / After
-
-<img src="docs/raw-vs-filtered.svg" width="700" alt="Raw vs filtered points — placeholder, replace with real capture">
+<sub>Note: the three pipeline photos above are phone shots of the on-surface visual output, not a debug view of the point-cloud/ID data — included as real-world evidence that detection was tracking contact point accurately, not a software screenshot.</sub>
 
 ## Interactive LED Wall
 
 Tracked touch points are sent over OSC into **TouchDesigner**, which runs the interactive game logic and drives the LED wall visuals in real time.
 
-<img src="docs/led-wall-game.svg" width="700" alt="LED wall game — placeholder, replace with real photo/video">
+<img src="docs/led-wall-game.jpg" width="700" alt="Mellat Multiverse booth — LED floor installation">
+
+<sub>The installation at the **Mellat Multiverse** booth (Dima, Bank Mellat).</sub>
 
 ## Demo
 
@@ -106,7 +121,7 @@ LiDAR-Touch-Tracking/
 ├── README.md
 ├── LICENSE
 ├── media/              # hardware photos, test/demo videos
-├── docs/               # diagrams (placeholders — to be replaced with final art)
+├── docs/               # real photos pulled from the test footage (see media/)
 └── demo/
     └── touch_tracking_concept.py   # simplified, illustrative tracking logic
 ```
