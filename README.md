@@ -2,9 +2,7 @@
 
 Real-time multi-touch detection and tracking from a 360° LiDAR sensor, built to drive an interactive LED wall game.
 
-<video src="media/demo-touch-1.mp4" controls width="700" poster="media/hero-poster.jpg"></video>
-
-*(demo clip — see [media/](media/) for more test footage)*
+<img src="media/output-on-wall.gif" width="700" alt="LiDAR-tracked touch driving the LED wall in real time">
 
 ## Overview
 
@@ -108,11 +106,9 @@ Tracked touch points are sent over OSC into **TouchDesigner**, which runs the in
 
 ## Demo
 
-<video src="media/demo-touch-2.mp4" controls width="500"></video> <video src="media/demo-touch-3.mp4" controls width="500"></video>
+<img src="media/close-up-test.gif" width="400" alt="Close-up of a finger triggering the touch response">
 
-<video src="media/demo-touch-4.mp4" controls width="500"></video>
-
-*(If videos don't render inline, see the files directly in [media/](media/).)*
+*(More footage — including a look at the Python detection/tracking output itself — to come.)*
 
 ## Repository Structure
 
