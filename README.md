@@ -2,7 +2,12 @@
 
 Real-time multi-touch detection and tracking from a 360° LiDAR sensor, built to drive an interactive LED wall game.
 
-<img src="media/output-on-wall.gif" width="700" alt="LiDAR-tracked touch driving the LED wall in real time">
+<table>
+<tr>
+<td><img src="media/wall-touch-glow.jpg" width="340" alt="A visitor's touch driving the LED wall glow effect"></td>
+<td><img src="media/dima-game-ui.jpg" width="340" alt="The Dima game screen — SCORE and PLAY counters, touch-controlled"></td>
+</tr>
+</table>
 
 ## Overview
 
