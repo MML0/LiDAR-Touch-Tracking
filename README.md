@@ -76,13 +76,13 @@ Raw Points → Filtering → Clustering → Touch Candidate → Persistent ID �
 
 <table>
 <tr>
-<td><img src="docs/ambient-scan.jpg" width="220" alt="Raw / idle scan"></td>
-<td><img src="docs/active-touch.jpg" width="220" alt="Touch detected"></td>
+<td><img src="media/live-scan-room-scan.png" width="220" alt="Full room scan, zoomed out, no touch"></td>
+<td><img src="media/live-scan-demo.gif" width="220" alt="Live tracking output with persistent touch IDs"></td>
 <td><img src="docs/led-wall-game.jpg" width="260" alt="Output on the LED wall"></td>
 </tr>
 <tr>
 <td align="center"><sub>1. Raw scan</sub></td>
-<td align="center"><sub>2. Touch detected</sub></td>
+<td align="center"><sub>2. Touch detected (live)</sub></td>
 <td align="center"><sub>3. Output on the wall</sub></td>
 </tr>
 </table>
@@ -101,7 +101,7 @@ This is what makes **multi-touch** possible on a sensor that has no concept of "
 
 See [`demo/touch_tracking_concept.py`](demo/touch_tracking_concept.py) for a short, simplified illustration of the ID-matching and occlusion logic (not the production code — see [Note on code](#note-on-code) below).
 
-<sub>Note: the three pipeline photos above are phone shots of the on-surface visual output, not a debug view of the point-cloud/ID data — included as real-world evidence that detection was tracking contact point accurately, not a software screenshot.</sub>
+<sub>Note: steps 1 and 2 above are real captures of the tracking script itself; step 3 is a phone photo of the resulting on-surface output.</sub>
 
 ## Interactive LED Wall
 
@@ -148,7 +148,7 @@ The wider installation had more people on it:
 
 | Role | Name |
 |---|---|
-| Development | Wenodes |
+| Development | [Wenodes](https://www.instagram.com/wenodes) |
 | LiDAR processing & tracking | [Arman-H-R](https://github.com/Arman-H-R) |
 | LED wall visuals | [Toomaj](https://www.instagram.com/2maj.k) |
 | Design | [Parsa Dirbas](https://www.instagram.com/parsadibazar) |
