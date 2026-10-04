@@ -36,9 +36,16 @@ OSC
 TouchDesigner  →  LED Wall / Game
 ```
 
-<img src="docs/system-in-situ.jpg" width="700" alt="The deployed system at the Mellat Multiverse booth">
-
-<sub>The system deployed at the Mellat Multiverse booth — LiDAR-driven floor projection reacting to a visitor in real time.</sub>
+<table>
+<tr>
+<td><img src="docs/system-in-situ.jpg" width="340" alt="The deployed system at the Mellat Multiverse booth"></td>
+<td><img src="media/live-scan-dev-setup.jpg" width="340" alt="Live-testing the tracking script on a laptop, code next to the output"></td>
+</tr>
+<tr>
+<td align="center"><sub>Deployed at the Mellat Multiverse booth</sub></td>
+<td align="center"><sub>Live-testing the tracking script, code next to output</sub></td>
+</tr>
+</table>
 
 ## Hardware
 
@@ -88,9 +95,9 @@ Raw Points → Filtering → Clustering → Touch Candidate → Persistent ID �
 
 This is what makes **multi-touch** possible on a sensor that has no concept of "touch" on its own — every object on the surface is tracked independently and concurrently, each with its own stable ID.
 
-<img src="media/hero-poster.jpg" width="500" alt="The installation responding to a visitor's touch">
+<img src="media/live-scan-ui.png" width="600" alt="Live tracking UI showing two touches with persistent IDs">
 
-<sub>Each contact point on the surface is tracked independently, by ID, as shown in the pipeline above.</sub>
+<sub>The actual tracking script running live — each tracked touch gets its own ID (here, <code>228</code> and <code>230</code>), alongside live FPS/point/touch counters.</sub>
 
 See [`demo/touch_tracking_concept.py`](demo/touch_tracking_concept.py) for a short, simplified illustration of the ID-matching and occlusion logic (not the production code — see [Note on code](#note-on-code) below).
 
@@ -106,9 +113,16 @@ Tracked touch points are sent over OSC into **TouchDesigner**, which runs the in
 
 ## Demo
 
-<img src="media/close-up-test.gif" width="400" alt="Close-up of a finger triggering the touch response">
-
-*(More footage — including a look at the Python detection/tracking output itself — to come.)*
+<table>
+<tr>
+<td><img src="media/close-up-test.gif" width="340" alt="Close-up of a finger triggering the touch response"></td>
+<td><img src="media/live-scan-demo.gif" width="340" alt="Live tracking script output with persistent touch IDs"></td>
+</tr>
+<tr>
+<td align="center"><sub>Touch response on the surface</sub></td>
+<td align="center"><sub>The tracking script running live, side by side with the code</sub></td>
+</tr>
+</table>
 
 ## Repository Structure
 
@@ -128,16 +142,20 @@ This repository is a portfolio writeup of the project rather than the full produ
 
 ## Credits
 
-This project was developed by **[Your Name]** in collaboration with:
+The LiDAR touch system itself — hardware, firmware, and tracking algorithm — was built by **Mohamad Mahdi Latifi ("MML")** and **[Arman-H-R](https://github.com/Arman-H-R)**. The interactive game running on top of it, in TouchDesigner, was also built by MML.
+
+The wider installation had more people on it:
 
 | Role | Name |
 |---|---|
 | Development | Wenodes |
-| LiDAR processing & tracking support | [Arman-H-R](https://github.com/Arman-H-R) |
-| LED wall visuals | Toomaj |
-| Design | Parsa Dirbas |
+| LiDAR processing & tracking | [Arman-H-R](https://github.com/Arman-H-R) |
+| LED wall visuals | [Toomaj](https://www.instagram.com/2maj.k) |
+| Design | [Parsa Dirbas](https://www.instagram.com/parsadibazar) |
 
 Built for an interactive LED wall activation for **Dima** (Bank Mellat, Iran).
+
+*This repo documents the LiDAR touch system specifically — the credits above are for the full game/installation team.*
 
 ## License
 
