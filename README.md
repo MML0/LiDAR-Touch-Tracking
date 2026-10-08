@@ -147,18 +147,16 @@ This repository is a portfolio writeup of the project rather than the full produ
 
 ## Credits
 
-The LiDAR touch system itself — hardware, firmware, and tracking algorithm — was built by **Mohamad Mahdi Latifi ("MML")** and **[Arman-H-R](https://github.com/Arman-H-R)**. The interactive game running on top of it, in TouchDesigner, was also built by MML.
+| **Role**                    | **Name**                                                |
+| --------------------------- | ------------------------------------------------------- |
+| Development & LiDAR R&D     | [MML](https://github.com/MML0/)                         |
+| LiDAR Processing & Tracking | [Arman H. R.](https://github.com/Arman-H-R)             |
+| LED Wall Visuals            | [Toomaj](https://www.instagram.com/2maj.k)              |
+| Design                      | [Parsa Dibazar](https://www.instagram.com/parsadibazar) |
 
-The wider installation had more people on it:
+**WENODES** — Interactive Technology & Experience
 
-| Role | Name |
-|---|---|
-| Development | [Wenodes](https://www.instagram.com/wenodes) |
-| LiDAR processing & tracking | [Arman-H-R](https://github.com/Arman-H-R) |
-| LED wall visuals | [Toomaj](https://www.instagram.com/2maj.k) |
-| Design | [Parsa Dirbas](https://www.instagram.com/parsadibazar) |
-
-Built for an interactive LED wall activation for **Dima** (Bank Mellat, Iran).
+Built for an interactive LED wall activation for **Dima (Bank Mellat, Iran)**.
 
 *This repo documents the LiDAR touch system specifically — the credits above are for the full game/installation team.*
 
